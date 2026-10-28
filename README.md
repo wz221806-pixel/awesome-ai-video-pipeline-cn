@@ -1,0 +1,300 @@
+# AI 视频全流程开源工具全景指南 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+
+> 一条完整的 AI 视频生产流水线：**选题调研 → 脚本创意 → 素材生成（文生视频 / 数字人）→ 剪辑合成 → 字幕配音 → 多语言本地化 → 多平台分发 → 数据复盘**。
+> 本清单精选 **100+ 个开源项目**，覆盖一键成片、文生/图生视频模型、数字人、AI 短剧、电商带货、智能切片、字幕翻译、矩阵分发、社媒爬虫与视频笔记等全部环节，持续更新。
+
+![Stars](https://img.shields.io/github/stars/wz221806-pixel/awesome-ai-video-pipeline-cn?style=social)
+![Last Commit](https://img.shields.io/github/last-commit/wz221806-pixel/awesome-ai-video-pipeline-cn)
+![License](https://img.shields.io/badge/license-CC0--1.0-blue)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen)](CONTRIBUTING.md)
+
+---
+
+## 🗺️ 全流程地图（先看这个）
+
+| 环节 | 要解决的问题 | 对应分类 | 代表项目 |
+|------|--------------|----------|----------|
+| ① 选题调研 | 找热点、扒爆款、看竞品 | [十、社媒数据采集与竞品分析](#十社媒数据采集与竞品分析) | MediaCrawler、TikHub SDK、douyin |
+| ② 脚本创意 | 写文案、剧本、分镜 | [一、端到端一站式平台](#一端到端一站式视频生成平台) / [四、AI 短剧](#四ai-短剧--漫剧--小说推文) | MoneyPrinterTurbo、PlotCraft |
+| ③ 素材生成 | 文生视频、图生视频、数字人 | [二、AI 视频模型](#二ai-文生图生视频模型) / [三、数字人](#三ai-数字人与虚拟主播) | Wan2.1、HunyuanVideo、FramePack |
+| ④ 剪辑合成 | 切片、混剪、渲染成片 | [六、智能剪辑与高光切片](#六智能剪辑与高光切片) / [八、编程式制作与编辑库](#八编程式视频制作与编辑库) | CutDeck、MoviePy、Remotion |
+| ⑤ 字幕配音 | 语音转写、翻译、配音对齐 | [七、字幕配音与多语言本地化](#七字幕配音与多语言本地化) | VideoLingo、faster-whisper、whisper.cpp |
+| ⑥ 多平台分发 | 矩阵发布、定时、搬运 | [九、多平台分发与矩阵运营](#九多平台分发与矩阵运营) | social-auto-upload、Postiz、matrix |
+| ⑦ 数据复盘 | 视频总结、知识沉淀、回流 | [十一、AI 视频分析与知识笔记](#十一ai-视频分析与知识笔记) | BiliNote、AI-Media2Doc |
+
+> 垂直场景另有：[五、电商带货与营销视频](#五电商带货与营销视频)。
+
+---
+
+## 📑 目录
+
+- [一、端到端一站式视频生成平台](#一端到端一站式视频生成平台)
+- [二、AI 文生/图生视频模型](#二ai-文生图生视频模型)
+- [三、AI 数字人与虚拟主播](#三ai-数字人与虚拟主播)
+- [四、AI 短剧 · 漫剧 · 小说推文](#四ai-短剧--漫剧--小说推文)
+- [五、电商带货与营销视频](#五电商带货与营销视频)
+- [六、智能剪辑与高光切片](#六智能剪辑与高光切片)
+- [七、字幕配音与多语言本地化](#七字幕配音与多语言本地化)
+- [八、编程式视频制作与编辑库](#八编程式视频制作与编辑库)
+- [九、多平台分发与矩阵运营](#九多平台分发与矩阵运营)
+- [十、社媒数据采集与竞品分析](#十社媒数据采集与竞品分析)
+- [十一、AI 视频分析与知识笔记](#十一ai-视频分析与知识笔记)
+- [常见问题](#常见问题)
+- [选型速查](#选型速查)
+- [贡献](#贡献)
+- [许可证](#许可证)
+
+---
+
+## 一、端到端一站式视频生成平台
+
+> 输入一个话题或链接，自动完成「脚本 → 素材 → 配音 → 字幕 → 剪辑 → 成片」的完整流水线。
+
+| 项目 | Stars | 可用性 | 说明 |
+|------|-------|--------|------|
+| [MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) | ![](https://img.shields.io/github/stars/harry0703/MoneyPrinterTurbo?style=flat-square) | ✅ 可自部署 | 一键 AI 短视频生成器 — 自动脚本、配音、字幕、剪辑，支持多种大模型 |
+| [MoneyPrinter](https://github.com/FujiwaraChoki/MoneyPrinter) | ![](https://img.shields.io/github/stars/FujiwaraChoki/MoneyPrinter?style=flat-square) | ✅ 可自部署 | 自动化 YouTube Shorts / TikTok 视频创建 |
+| [ShortGPT](https://github.com/RayVentura/ShortGPT) | ![](https://img.shields.io/github/stars/RayVentura/ShortGPT?style=flat-square) | ✅ 可自部署 | 短视频全流程自动化 AI 框架 |
+| [RedditVideoMakerBot](https://github.com/elebumm/RedditVideoMakerBot) | ![](https://img.shields.io/github/stars/elebumm/RedditVideoMakerBot?style=flat-square) | ✅ 可自部署 | Reddit 帖子自动转 TikTok/Shorts 风格解说视频 |
+| [NarratoAI](https://github.com/linyqh/NarratoAI) | ![](https://img.shields.io/github/stars/linyqh/NarratoAI?style=flat-square) | ✅ 可自部署 | AI 一键解说并剪辑视频 — 自动脚本、配音、成片 |
+| [MoneyPrinterPlus](https://github.com/ddean2009/MoneyPrinterPlus) | ![](https://img.shields.io/github/stars/ddean2009/MoneyPrinterPlus?style=flat-square) | ✅ 可自部署 | AI 一键批量生成各类短视频，支持多平台和多种大模型 |
+| [Pixelle-Video](https://github.com/AIDC-AI/Pixelle-Video) | ![](https://img.shields.io/github/stars/AIDC-AI/Pixelle-Video?style=flat-square) | ✅ 可自部署 | AI 全自动短视频引擎 — 端到端生成流水线 |
+| [Video-Materials-AutoGEN-Workstation](https://github.com/Norsico/Video-Materials-AutoGEN-Workstation) | ![](https://img.shields.io/github/stars/Norsico/Video-Materials-AutoGEN-Workstation?style=flat-square) | ✅ 可自部署 | 短视频生成工作站 — 自动素材搜集与合成 |
+| [OpenMontage](https://github.com/calesthio/OpenMontage) | ![](https://img.shields.io/github/stars/calesthio/OpenMontage?style=flat-square) | ✅ 可自部署 | 开源 Agent 视频生产系统 —— 从调研、脚本、素材生成到时间线剪辑和成片渲染，全流程自动化 |
+| [AIGC-Claw](https://github.com/HITsz-TMG/AIGC-Claw) | ![](https://img.shields.io/github/stars/HITsz-TMG/AIGC-Claw?style=flat-square) | ✅ 可自部署 | AI 导演式视频生成系统 —— 从一句想法自动拆解到剧本、角色/场景设计、分镜、参考图、视频生成和后期剪辑，支持 Web / 微信 / 飞书协作 |
+| [CaroCut](https://github.com/bilibili/carocut) | ![](https://img.shields.io/github/stars/bilibili/carocut?style=flat-square) | ✅ 可自部署 | B 站开源的多 Agent 视频制作系统，基于 OpenCode AI SDK 和 Remotion，将 PDF、图片、文本自动转成专业视频 |
+| [MoneyPrinterAICreate](https://github.com/q1uki/MoneyPrinterAICreate) | ![](https://img.shields.io/github/stars/q1uki/MoneyPrinterAICreate?style=flat-square) | ✅ 可自部署 | 基于 MoneyPrinterTurbo 的短视频生成增强版 —— 接入通义万相 Wan2.1 文/图生视频素材，支持分镜与提示词可编辑，自动拼接字幕、配音和配乐成片。 |
+| [KaiyanAI / KaiyanTool](https://github.com/xiashao/KaiyanTool) | ![](https://img.shields.io/github/stars/xiashao/KaiyanTool?style=flat-square) | ✅ 可自部署 | 面向影视创作者的一站式 AI 创作平台 —— 从剧本、分镜到图像/视频生成全流程打通，支持多模型、桌面端 Tauri 应用和较完整的工程化文档。 |
+| [AI Video Workstation / auto_video_maker](https://github.com/rancho-houyaohui/auto_video_maker) | ![](https://img.shields.io/github/stars/rancho-houyaohui/auto_video_maker?style=flat-square) | ✅ 可自部署 | 本地大模型驱动的视频生产工作站 —— 自动拆分分镜、匹配素材、生成 TTS/音效/字幕，并提供 Web UI 做逐镜头精修与渲染。 |
+| [VideoClaw](https://github.com/HITsz-TMG/VideoClaw) | ![](https://img.shields.io/github/stars/HITsz-TMG/VideoClaw?style=flat-square) | ✅ 可自部署 | AI 全自动化视频生成员工 — 输入一句话创意，自动生成完整影片，覆盖剧本、分镜、素材、配音、剪辑全流程。支持 Web/微信/飞书协作。 |
+| [ai-mixed-cut](https://github.com/toki-plus/ai-mixed-cut) | ![](https://img.shields.io/github/stars/toki-plus/ai-mixed-cut?style=flat-square) | ✅ 可自部署 | AI 内容再创作引擎 — "解构-重构"爆款视频模式，全自动生成高度原创短视频。 |
+| [xiaoye-ai](https://github.com/capybara-zy/xiaoye-ai) | ![](https://img.shields.io/github/stars/capybara-zy/xiaoye-ai?style=flat-square) | ✅ 可自部署 | 多模态 AI 内容创作平台，支持 Google Gemini、火山引擎 Seedream/Seedance 等模型进行图像和视频生成。 |
+| [ai-video-workflow](https://github.com/toki-plus/ai-video-workflow) | ![](https://img.shields.io/github/stars/toki-plus/ai-video-workflow?style=flat-square) | ✅ 可自部署 | 全自动 AI 原生视频生成工作流，集成文生图(LibLib)/图生视频(即梦)/文生音乐(即梦)和 AI 提示词生成(豆包)，一键创作 AIGC 短视频。 |
+| [open-director](https://github.com/seme-org/open-director) | ![](https://img.shields.io/github/stars/seme-org/open-director?style=flat-square) | ✅ 可自部署 | 开源 AI 视频工作室 — 从一句话到成片。支持创意模式（AI 导演全流程自动生成）和批量模式（批量生产短视频）。Open-source AI video studio. |
+| [video-clipforge](https://github.com/Johnson-Jia/video-clipforge) | ![](https://img.shields.io/github/stars/Johnson-Jia/video-clipforge?style=flat-square) | ✅ 可自部署 | AI 驱动的短视频制作系统。给它一个想法，它帮你写稿、配音、做画面、出成片。9 阶段 DAG 管线 + 自进化评分，支持每日自动执行。基于 Claude Code + HyperFrames。 |
+| [vibe-knowledge-video](https://github.com/xiazhuo123456789/vibe-knowledge-video) | ![](https://img.shields.io/github/stars/xiazhuo123456789/vibe-knowledge-video?style=flat-square) | ✅ 可自部署 | Vibe知识大赏风格 AI 知识视频 Skill — 纯代码生成电影感知识短视频（无配音·双语字幕·合成BGM·历史文献再现），风格规范逆向自 8 条抖音爆款原片（1091 帧逐秒分析） |
+
+---
+
+## 二、AI 文生/图生视频模型
+
+> 视频生成的底层模型与权重，可本地部署或通过 Web/API 调用，是素材生成环节的核心引擎。
+
+| 项目 | Stars | 可用性 | 说明 |
+|------|-------|--------|------|
+| [Open-Sora](https://github.com/hpcaitech/Open-Sora) | ![](https://img.shields.io/github/stars/hpcaitech/Open-Sora?style=flat-square) | ✅ 可自部署 | 开源 Sora 复现 — 高质量文本生成视频 |
+| [Wan2.1](https://github.com/Wan-Video/Wan2.1) | ![](https://img.shields.io/github/stars/Wan-Video/Wan2.1?style=flat-square) | ✅ 可自部署 | 阿里开源视频生成套件 — 文/图生视频，1.3B-14B 参数，中英双语 |
+| [FramePack](https://github.com/lllyasviel/FramePack) | ![](https://img.shields.io/github/stars/lllyasviel/FramePack?style=flat-square) | ✅ 可自部署 | ControlNet 作者新作 — 固定显存生成任意长度视频，消费级显卡可跑 |
+| [CogVideo](https://github.com/THUDM/CogVideo) | ![](https://img.shields.io/github/stars/THUDM/CogVideo?style=flat-square) | ✅ 可自部署 | 清华文生视频扩散模型 — 2B/5B 参数版本 |
+| [HunyuanVideo](https://github.com/Tencent/HunyuanVideo) | ![](https://img.shields.io/github/stars/Tencent/HunyuanVideo?style=flat-square) | ✅ 可自部署 | 腾讯开源大规模视频生成模型 |
+| [HunyuanVideo-1.5](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) | ![](https://img.shields.io/github/stars/Tencent-Hunyuan/HunyuanVideo-1.5?style=flat-square) | ✅ 可自部署 | 腾讯轻量级视频生成模型 —— 8.3B 参数、消费级显卡可跑，开源权重、训练/推理代码、ComfyUI 支持和中英提示词手册 |
+| [AnimateDiff](https://github.com/guoyww/AnimateDiff) | ![](https://img.shields.io/github/stars/guoyww/AnimateDiff?style=flat-square) | ✅ 可自部署 | 将个性化文生图模型转为视频动画 |
+| [doubao-seedance-ttv-itv](https://github.com/wwwzhouhui/doubao-seedance-ttv-itv) | ![](https://img.shields.io/github/stars/wwwzhouhui/doubao-seedance-ttv-itv?style=flat-square) | ✅ 可自部署 | 豆包 Seedance 1.5 Pro 视频生成工具，支持文生视频和图生视频，提供 Gradio Web UI 和 RESTful API。 |
+| [Seedance 2.0 Web](https://github.com/wwwzhouhui/seedance2.0) | ![](https://img.shields.io/github/stars/wwwzhouhui/seedance2.0?style=flat-square) | ✅ 可自部署 | 基于即梦 / CapCut Dreamina 的 AI 视频生成 Web 应用 —— 支持多图参考、双模型/多画幅/4-15 秒时长、Cookie 导入和 Docker 一键部署 |
+
+---
+
+## 三、AI 数字人与虚拟主播
+
+> 数字分身、虚拟主播、形象克隆与口播驱动。
+
+| 项目 | Stars | 可用性 | 说明 |
+|------|-------|--------|------|
+| [aigcpanel](https://github.com/modstart-lib/aigcpanel) | ![](https://img.shields.io/github/stars/modstart-lib/aigcpanel?style=flat-square) | ✅ 直接可用 | AIGC 数字人系统 — AI 虚拟主播 / 数字分身 |
+
+---
+
+## 四、AI 短剧 · 漫剧 · 小说推文
+
+> 从小说/剧本/创意到分镜、角色、素材、成片的短剧与漫剧生产，以及小说推文自动化。
+
+| 项目 | Stars | 可用性 | 说明 |
+|------|-------|--------|------|
+| [huobao-drama](https://github.com/chatfire-AI/huobao-drama) | ![](https://img.shields.io/github/stars/chatfire-AI/huobao-drama?style=flat-square) | ✅ 直接可用 | 火宝短剧 — 一句话生成完整短剧 |
+| [Toonflow-app](https://github.com/HBAI-Ltd/Toonflow-app) | ![](https://img.shields.io/github/stars/HBAI-Ltd/Toonflow-app?style=flat-square) | ✅ 直接可用 | AI 短剧漫剧生成工具 |
+| [ArcReel](https://github.com/ArcReel/ArcReel) | ![](https://img.shields.io/github/stars/ArcReel/ArcReel?style=flat-square) | ⚠️ 部分可用 | 开源 AI 视频工作台 —— 从小说/创意到脚本、分镜、素材和短视频，全程由 Agent 编排 |
+| [LocalMiniDrama](https://github.com/xuanyustudio/LocalMiniDrama) | ![](https://img.shields.io/github/stars/xuanyustudio/LocalMiniDrama?style=flat-square) | ✅ 直接可用 | 本地 AI 短剧/漫剧生成工具 —— 下载即用、数据不出本机、支持接入自有模型 API |
+| [PlotCraft](https://github.com/Agions/PlotCraft) | ![](https://img.shields.io/github/stars/Agions/PlotCraft?style=flat-square) | ✅ 直接可用 | AI 驱动的视频脚本与短剧生产平台，支持小说 / 剧本 / 提示词导入、AI 分镜、角色一致性、唇形同步、批量渲染与一键导出，并提供 Web + Tauri 桌面端。 |
+| [AI_novel](https://github.com/tyxben/AI_novel) | ![](https://img.shields.io/github/stars/tyxben/AI_novel?style=flat-square) | ✅ 直接可用 | 小说推文自动化平台 —— 将长篇小说一键转成适合抖音/小红书的有声短视频，支持 CLI / Web UI / MCP |
+| [FastMovieAI](https://github.com/xhadmincn/FastMovieAI) | ![](https://img.shields.io/github/stars/xhadmincn/FastMovieAI?style=flat-square) | ✅ 直接可用 | 开源短剧/短视频创作平台 —— 前后端分离，覆盖脚本、素材、生成、支付和内容管理等完整链路 |
+| [AI-NovelFlow](https://github.com/qzw881130/AI-NovelFlow) | ![](https://img.shields.io/github/stars/qzw881130/AI-NovelFlow?style=flat-square) | ✅ 直接可用 | 小说转视频平台，覆盖角色/场景/道具解析、分镜生成、配音与视频合成，并支持多语言界面与自定义 ComfyUI 工作流 |
+| [huobao-drama-ai](https://github.com/dav-niu474/huobao-drama-ai) | ![](https://img.shields.io/github/stars/dav-niu474/huobao-drama-ai?style=flat-square) | ⚠️ 部分可用 | AI 短剧创作平台 — 从剧本到成片，一站式 AI 短剧制作工作台。支持 70+ 大模型、图片生成、视频生成(Seedance 2.0)、AI 配音。 |
+| [AIYOU](https://github.com/yubowen123/AIYOU_open-ai-video-drama-generator) | ![](https://img.shields.io/github/stars/yubowen123/AIYOU_open-ai-video-drama-generator?style=flat-square) | ⚠️ 部分可用 | AIYOU — AI 短剧平台，36 天 VibeCoding 构建。自动化工作流：剧本创作 → 角色设计 → 分镜生成 → 视频合成 → 配音字幕，一站式 AI 短剧制作。 |
+
+---
+
+## 五、电商带货与营销视频
+
+> 面向电商商家的商品图/链接 → 卖点提炼 → 种草脚本 → 数字人/混剪 → 带货成片 → 多平台发布的垂直闭环。
+
+| 项目 | Stars | 可用性 | 说明 |
+|------|-------|--------|------|
+| [short-video-factory](https://github.com/YILS-LIN/short-video-factory) | ![](https://img.shields.io/github/stars/YILS-LIN/short-video-factory?style=flat-square) | ✅ 可自部署 | 一键生成产品营销短视频 |
+| [daihuo-jianshou](https://github.com/witty-suckerpunch492/daihuo-jianshou) | ![](https://img.shields.io/github/stars/witty-suckerpunch492/daihuo-jianshou?style=flat-square) | ✅ 可自部署 | AI 电商带货短视频自动生成 — 上传商品图，AI 生成脚本、素材并合成视频，适配抖音、快手、小红书。 |
+| [ClipForge](https://github.com/xixihhhh/clipforge) | ![](https://img.shields.io/github/stars/xixihhhh/clipforge?style=flat-square) | ✅ 可自部署 | ClipForge（原『带货剪手』/ daihuo-jianshou）：开源 AI 带货短视频神器——上传一张商品图，AI 自动提炼卖点 + 写种草脚本 + 锁定商品原图不变形 + 配画面/配音/字幕，一键产出抖音小店 / 快手 / 小红书 / TikTok Shop 卖货短视频。0 成本批量出片、开源无水印、本地自部署。也支持一句话主题成片。 |
+| [daihuo-jianshou (xixihhhh)](https://github.com/xixihhhh/daihuo-jianshou) | ![](https://img.shields.io/github/stars/xixihhhh/daihuo-jianshou?style=flat-square) | ✅ 可自部署 | AI 电商带货视频生成工具 — 上传商品图自动生成抖音/快手/小红书带货短视频，AI 脚本+生图+合成一条龙，支持 Seedance 2.0 / GPT Image 2 / Kling 3.0 / Veo 3 等模型。（与 ClipForge 同作者，ClipForge 为其后续更名版本） |
+| [Shopro-AI](https://github.com/wyxpro/Shopro-AI) | ![](https://img.shields.io/github/stars/wyxpro/Shopro-AI?style=flat-square) | ✅ 可自部署 | 一款专门解决抖音/TikTok/快手/小红书电商商家在短视频营销中“痛点”的平台。通过「商品信息输入/URL 卖点提取 ➔ AI 智能脚本生成 ➔ 数字人选择与克隆 ➔ 多语言智能翻译 ➔ 分镜编辑 ➔ 素材混剪 ➔ 视频异步合成 ➔ 多平台一键发布」的完整 Agent 端到端闭环，帮助商家以极低成本快速产出高转化潜力的带货视频。 |
+
+---
+
+## 六、智能剪辑与高光切片
+
+> 长视频/直播/播客自动拆条、找高光、横转竖、加字幕、影视解说，以及素材混剪。
+
+| 项目 | Stars | 可用性 | 说明 |
+|------|-------|--------|------|
+| [CutDeck](https://github.com/Agions/CutDeck) | ![](https://img.shields.io/github/stars/Agions/CutDeck?style=flat-square) | ✅ 可自部署 | 开源 AI 视频剪辑工具，自动从长视频拆出短爆款片段，支持多画幅导出、本地 Whisper 字幕和 Rust 渲染管线 |
+| [ai-highlight-clip](https://github.com/toki-plus/ai-highlight-clip) | ![](https://img.shields.io/github/stars/toki-plus/ai-highlight-clip?style=flat-square) | ✅ 可自部署 | AI 长视频高光剪辑工具 — 自动将课程/访谈/直播回放转为数十个爆款短视频，内置 Whisper 识别与大模型评分。 |
+| [Voxplore](https://github.com/Agions/Voxplore) | ![](https://img.shields.io/github/stars/Agions/Voxplore?style=flat-square) | ✅ 可自部署 | AI 第一人称视频解说工具 —— 批量上传素材后自动分组、抽取片段、生成配音和字幕，适合短剧、影视混剪和 vlog 叙事化改写。 |
+| [story-fab](https://github.com/Agions/story-fab) | ![](https://img.shields.io/github/stars/Agions/story-fab?style=flat-square) | ✅ 可自部署 | 开源 AI 视频剪辑工具。长视频自动拆条为爆款短片段，支持 9:16/1:1/16:9 多格式导出，本地 Whisper 字幕，Rust 渲染管线，无需上传。 |
+| [hotclip](https://github.com/xixihhhh/hotclip) | ![](https://img.shields.io/github/stars/xixihhhh/hotclip?style=flat-square) | ✅ 可自部署 | 免费开源的 AI 剪辑 / 直播切片工具：长视频、直播回放、播客一键切成爆款竖屏短视频——AI 找高光金句、自动加字幕、横屏转竖屏，本地运行无水印不上传。Free open-source Opus Clip alternative, 100% local. |
+| [VideoHub](https://github.com/cacity/VideoHub) | ![](https://img.shields.io/github/stars/cacity/VideoHub?style=flat-square) | ✅ 可自部署 | VideoHub 是一款本地化多平台视频处理与智能剪辑工具，支持 YouTube、抖音/TikTok、Instagram、Bilibili 和 Twitter/X，提供视频下载、Whisper 转写、字幕翻译与润色、多模型 AI 配音、影视解说、故事剪辑、音乐卡点及剧集批量处理，并可通过 Codex、Claude Code 等智能助手以自然语言完成完整工作流。 |
+| [autoclip](https://github.com/zhouxiaoka/autoclip) | ![](https://img.shields.io/github/stars/zhouxiaoka/autoclip?style=flat-square) | ✅ 可自部署 | AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing. |
+| [scene-fab](https://github.com/Agions/scene-fab) | ![](https://img.shields.io/github/stars/Agions/scene-fab?style=flat-square) | ⚠️ 部分可用 | scene-fab — AI 影视解说创作工具，智能拆条、AI 解说生成、一键配音合成。自动识别精彩片段，生成解说文案并合成完整影视解说视频。 |
+
+---
+
+## 七、字幕配音与多语言本地化
+
+> 语音转写（ASR）、字幕切分与校正、AI 翻译、语音克隆配音、音轨对齐、硬字幕去除、出海本地化。
+
+| 项目 | Stars | 可用性 | 说明 |
+|------|-------|--------|------|
+| [VideoLingo](https://github.com/Huanshere/VideoLingo) | ![](https://img.shields.io/github/stars/Huanshere/VideoLingo?style=flat-square) | ✅ 直接可用 | 视频翻译一条龙 — Netflix 级字幕切分、AI 翻译、配音对齐 |
+| [KrillinAI](https://github.com/krillinai/KrillinAI) | ![](https://img.shields.io/github/stars/krillinai/KrillinAI?style=flat-square) | ✅ 直接可用 | AI 视频翻译配音工具 — 多语言支持 |
+| [PotPlayer_ChatGPT_Translate](https://github.com/Felix3322/PotPlayer_ChatGPT_Translate) | ![](https://img.shields.io/github/stars/Felix3322/PotPlayer_ChatGPT_Translate?style=flat-square) | ✅ 直接可用 | PotPlayer 实时字幕翻译插件 —— 接入 OpenAI 兼容接口，支持观看视频时即时翻译字幕 |
+| [video-subtitle-remover](https://github.com/YaoFANGUK/video-subtitle-remover) | ![](https://img.shields.io/github/stars/YaoFANGUK/video-subtitle-remover?style=flat-square) | ✅ 直接可用 | AI 视频硬字幕去除 / 文本水印去除 |
+| [faster-whisper](https://github.com/SYSTRAN/faster-whisper) | ![](https://img.shields.io/github/stars/SYSTRAN/faster-whisper?style=flat-square) | ✅ 直接可用 | Whisper 4x 加速版 — 自动生成字幕/文字稿 |
+| [whisper.cpp](https://github.com/ggerganov/whisper.cpp) | ![](https://img.shields.io/github/stars/ggerganov/whisper.cpp?style=flat-square) | ✅ 直接可用 | C/C++ 高性能 Whisper — 支持 CPU 和 Apple Silicon 本地运行 |
+| [VideoCaptioner](https://github.com/WEIFENG2333/VideoCaptioner) | ![](https://img.shields.io/github/stars/WEIFENG2333/VideoCaptioner?style=flat-square) | ✅ 直接可用 | 基于 LLM 的字幕工作台 —— 语音识别、断句优化、字幕校正、翻译、烧录，提供 GUI/CLI 和测试 |
+| [Silhouette](https://github.com/xulihang/Silhouette) | ![](https://img.shields.io/github/stars/xulihang/Silhouette?style=flat-square) | ✅ 直接可用 | 面向音视频的计算机辅助翻译工具，集成 Whisper 识别、ChatGPT / DeepSeek 上下文翻译、波形级字幕校正、强制对齐和 SRT/TXT 导出，支持 Win/macOS/Linux。 |
+| [Open-Lyrics](https://github.com/zh-plus/Open-Lyrics) | ![](https://img.shields.io/github/stars/zh-plus/Open-Lyrics?style=flat-square) | ✅ 直接可用 | Whisper + LLM 字幕流水线 —— 转录、翻译、润色为 `.lrc`，支持双语字幕、术语表、音频预处理和 PyPI 安装 |
+| [MioSub](https://github.com/corvo007/MioSub) | ![](https://img.shields.io/github/stars/corvo007/MioSub?style=flat-square) | ✅ 直接可用 | 全自动字幕工作台：下载、转录、翻译、对齐、压制一条龙，支持音视频双场景、CTC 对齐、桌面应用和在线文档，适合字幕组与出海内容团队。 |
+| [xiaoniu](https://github.com/agan-j/xiaoniu) | ![](https://img.shields.io/github/stars/agan-j/xiaoniu?style=flat-square) | ✅ 直接可用 | 小牛视频翻译 — 支持本地视频翻译、字幕翻译和 YouTube 视频翻译下载，集成 ASR 与多语言翻译，助力创作者高效完成视频本地化。 |
+| [xiaohu-video-translate](https://github.com/xiaohuailabs/xiaohu-video-translate) | ![](https://img.shields.io/github/stars/xiaohuailabs/xiaohu-video-translate?style=flat-square) | ✅ 直接可用 | 小虎视频翻译 — 一句话将外语视频自动配上中文字幕。下载/转写/翻译/润色/烧录一条龙，全程本地运行，转写零 API 费用。 |
+| [YouDub-webui](https://github.com/liuzhao1225/YouDub-webui) | ![](https://img.shields.io/github/stars/liuzhao1225/YouDub-webui?style=flat-square) | ✅ 直接可用 | 开源 AI 视频本地化工具：自动完成 YouTube/Bilibili 视频下载、字幕识别与翻译、语音克隆配音、音轨混合和字幕压制。 |
+| [2ByteASR](https://github.com/NOTBAD314/2ByteASR) | ![](https://img.shields.io/github/stars/NOTBAD314/2ByteASR?style=flat-square) | ✅ 直接可用 | 兔白字幕：面向中文游戏实况的本地字幕识别与视频编辑工具，支持校对、说话人分轨与特效字幕。当前提供源码，暂无公开安装包。 |
+| [StreamLingo](https://github.com/michael-chow-arch/StreamLingo) | ![](https://img.shields.io/github/stars/michael-chow-arch/StreamLingo?style=flat-square) | ✅ 直接可用 | YouTube 直播实时 AI 翻译字幕，支持本地 Ollama，英中双向。首次配置，日常双击启动。AI captions for YouTube livestreams with local Ollama. English ↔ Chinese. Windows/NVIDIA preview; setup once, double-click to start. |
+
+---
+
+## 八、编程式视频制作与编辑库
+
+> 用代码生成/处理视频，适合工程化、批量化与自动化流水线集成。
+
+| 项目 | Stars | 可用性 | 说明 |
+|------|-------|--------|------|
+| [Remotion](https://github.com/remotion-dev/remotion) | ![](https://img.shields.io/github/stars/remotion-dev/remotion?style=flat-square) | ✅ 可自部署 | 用 React 写视频 — 支持服务端渲染和 AWS Lambda 批量生成 |
+| [MoviePy](https://github.com/Zulko/moviepy) | ![](https://img.shields.io/github/stars/Zulko/moviepy?style=flat-square) | ✅ 可自部署 | Python 视频编辑库 — 剪切、合成、特效、文字叠加 |
+| [ffmpeg-python](https://github.com/kkroening/ffmpeg-python) | ![](https://img.shields.io/github/stars/kkroening/ffmpeg-python?style=flat-square) | ✅ 可自部署 | FFmpeg 的 Python 封装 — 视频/音频处理流水线 |
+
+---
+
+## 九、多平台分发与矩阵运营
+
+> 一键多平台发布、定时排期、账号矩阵、内容搬运，以及图文/视频一体化运营。
+
+| 项目 | Stars | 可用性 | 说明 |
+|------|-------|--------|------|
+| [Postiz](https://github.com/gitroomhq/postiz-app) | ![](https://img.shields.io/github/stars/gitroomhq/postiz-app?style=flat-square) | ⚠️ 部分可用 | 开源社媒管理平台 — Buffer/Hootsuite 替代品，支持定时发布和 AI 内容生成 |
+| [social-auto-upload](https://github.com/dreammis/social-auto-upload) | ![](https://img.shields.io/github/stars/dreammis/social-auto-upload?style=flat-square) | ✅ 直接可用 | 视频一键多平台分发 — 抖音/TikTok/B站/快手/小红书/视频号 |
+| [matrix](https://github.com/kebenxiaoming/matrix) | ![](https://img.shields.io/github/stars/kebenxiaoming/matrix?style=flat-square) | ✅ 直接可用 | 基于 Playwright 的短视频矩阵分发脚本系统，可自动发布到抖音、视频号、小红书、快手等平台，并支持登录态与发布队列管理。 |
+| [video-mover](https://github.com/toki-plus/video-mover) | ![](https://img.shields.io/github/stars/toki-plus/video-mover?style=flat-square) | ✅ 直接可用 | 全自动短视频搬运工具 — 支持多平台视频下载与发布 |
+| [BrightBean Studio](https://github.com/brightbeanxyz/brightbean-studio) | ![](https://img.shields.io/github/stars/brightbeanxyz/brightbean-studio?style=flat-square) | ⚠️ 部分可用 | 自托管社媒管理平台 —— 面向创作者/代理机构，支持排期、审批、发布、分析和多工作区协作 |
+| [YTB2BILI](https://github.com/difyz9/ytb2bili) | ![](https://img.shields.io/github/stars/difyz9/ytb2bili?style=flat-square) | ✅ 直接可用 | YouTube/TikTok 到 B 站的全自动搬运流水线 —— 下载、Whisper 字幕、AI 翻译、元数据生成、定时发布一条龙 |
+| [PostBot](https://github.com/gitcoffee-os/postbot) | ![](https://img.shields.io/github/stars/gitcoffee-os/postbot?style=flat-square) | ✅ 直接可用 | 多平台内容同步分发工具 —— 文章、笔记、图片、视频、音频一键发布到主流中文和国际平台 |
+| [Wechatsync](https://github.com/wechatsync/Wechatsync) | ![](https://img.shields.io/github/stars/wechatsync/Wechatsync?style=flat-square) | ✅ 直接可用 | 文章多平台同步助手 —— 支持公众号、知乎、掘金、CSDN、WordPress 等渠道的一次编辑、多端分发 |
+| [biliup](https://github.com/biliup/biliup) | ![](https://img.shields.io/github/stars/biliup/biliup?style=flat-square) | ✅ 直接可用 | 直播录制与投稿自动化工具 —— 支持 B 站投稿、直播录制、视频下载和跨平台内容搬运 |
+| [SyncCaster](https://github.com/RyanYipeng/SyncCaster) | ![](https://img.shields.io/github/stars/RyanYipeng/SyncCaster?style=flat-square) | ✅ 直接可用 | Chrome 多平台内容分发扩展 —— 采集或撰写文章后统一转 Markdown，并自动同步到知乎、掘金、CSDN、公众号等 |
+| [AIWriteX](https://github.com/iniwap/AIWriteX) | ![](https://img.shields.io/github/stars/iniwap/AIWriteX?style=flat-square) | ✅ 直接可用 | 公众号多智能体内容生产平台 —— 热点聚合、选题、采集、去 AI 味改写、排版、配图与自动发布一体化，并支持小红书/百家号/抖音等多平台改写分发 |
+| [SynapseAutomation](https://github.com/Laihiujin/SYNAPSEAUTOMATION) | ![](https://img.shields.io/github/stars/Laihiujin/SYNAPSEAUTOMATION?style=flat-square) | ✅ 直接可用 | AI 矩阵投放/分发中台 —— 多账号多素材多平台排期、发布、监控和数据回收闭环，覆盖抖音/小红书/快手/视频号/B 站 |
+| [RedBox](https://github.com/Jamailar/RedBox) | ![](https://img.shields.io/github/stars/Jamailar/RedBox?style=flat-square) | ✅ 直接可用 | 面向小红书创作者的 AI 工作台 —— 支持内容采集入库、随机漫步选题、稿件管理、AI 生图/生视频、封面生成和 RedClaw 自动化执行 |
+| [wechat-on-airflow](https://github.com/claude89757/wechat-on-airflow) | ![](https://img.shields.io/github/stars/claude89757/wechat-on-airflow?style=flat-square) | ✅ 直接可用 | 基于 Apache Airflow 的微信智能应用编排框架，支持个人微信 / 公众号 / 企业微信消息接入、AI 自动回复、知识库客服、图文与短视频生成等工作流。 |
+| [Y2A-Auto](https://github.com/fqscfqj/Y2A-Auto) | ![](https://img.shields.io/github/stars/fqscfqj/Y2A-Auto?style=flat-square) | ✅ 直接可用 | YouTube 到 AcFun 和 Bilibili 自动化搬运工具，支持 AI 翻译、字幕生成、内容审核、智能监控。 |
+| [MultiPost-Extension](https://github.com/leaperone/MultiPost-Extension) | ![](https://img.shields.io/github/stars/leaperone/MultiPost-Extension?style=flat-square) | ✅ 直接可用 | 浏览器扩展，一键发布内容到多个社媒平台，支持知乎、CSDN、掘金、公众号、小红书、抖音等多渠道同步分发。 |
+| [liying_ai](https://github.com/liying-main/liying_ai) | ![](https://img.shields.io/github/stars/liying-main/liying_ai?style=flat-square) | ⚠️ 部分可用 | 厉影 AI 短视频智能体，深度融合云端算力调度、NLP、TTS、数字人驱动、视频剪辑与多平台分发能力，一键生成短视频。 |
+| [meiti-ai](https://github.com/zhuixin8/meiti-ai) | ![](https://img.shields.io/github/stars/zhuixin8/meiti-ai?style=flat-square) | ✅ 可自部署 | ALQQ · AI 自媒体内容运营平台｜一次创作，图文/动态/视频 一键分发 20+ 平台（抖音/小红书/B站/快手/视频号/头条/百家号/公众号/知乎/微博等）。AI 写文·去 AI 味·热点选题·定时自动发布·多账号矩阵。完全免费，桌面端+网页端。 |
+
+---
+
+## 十、社媒数据采集与竞品分析
+
+> 各平台公开数据爬取、视频去水印下载、评论采集、达人/选题/竞品分析与 AI 训练数据采集。
+
+| 项目 | Stars | 可用性 | 说明 |
+|------|-------|--------|------|
+| [MediaCrawler](https://github.com/NanmiCoder/MediaCrawler) | ![](https://img.shields.io/github/stars/NanmiCoder/MediaCrawler?style=flat-square) | ✅ 直接可用 | 小红书/抖音/快手/B站/微博爬虫 — 竞品分析利器 |
+| [douyin](https://github.com/erma0/douyin) | ![](https://img.shields.io/github/stars/erma0/douyin?style=flat-square) | ✅ 直接可用 | 抖音开源爬虫与下载工具 —— 账号主页、话题、合集、作品、关注/粉丝等公开数据采集，提供 GUI / Web / CLI / REST API |
+| [xhs](https://github.com/ReaJason/xhs) | ![](https://img.shields.io/github/stars/ReaJason/xhs?style=flat-square) | ✅ 直接可用 | 小红书 Web API 封装与爬取工具链 —— 适合做内容抓取、账号分析和数据采集 |
+| [bilibili-comment-crawler](https://github.com/1dyer/bilibili-comment-crawler) | ![](https://img.shields.io/github/stars/1dyer/bilibili-comment-crawler?style=flat-square) | ✅ 直接可用 | B 站评论抓取工具 —— 支持一级评论、二级回复和 CSV 导出，适合舆情与选题分析 |
+| [TikHub API Python SDK](https://github.com/TikHub/TikHub-API-Python-SDK) | ![](https://img.shields.io/github/stars/TikHub/TikHub-API-Python-SDK?style=flat-square) | ⚠️ 部分可用 | TikHub 官方 Python SDK，统一封装抖音、小红书、B站、微博、YouTube 等 16+ 平台数据接口，适合做选题分析、竞品监测、达人研究和 AI 训练数据采集。 |
+| [videodl](https://github.com/CharlesPikachu/videodl) | ![](https://img.shields.io/github/stars/CharlesPikachu/videodl?style=flat-square) | ✅ 可自部署 | Videodl: A lightweight video downloader written in pure python.（轻量级视频下载器，优先高清无水印，支持抖音、快手、小红书、B站、TikTok、YouTube、优酷、腾讯、爱奇艺、芒果、微博、今日头条、网易公开课、全民K歌、CCTV 等多平台） |
+| [parse-video](https://github.com/wujunwei928/parse-video) | ![](https://img.shields.io/github/stars/wujunwei928/parse-video?style=flat-square) | ✅ 可自部署 | Golang 短视频去水印：抖音、皮皮虾、火山、微视、最右、快手、全民小视频、皮皮搞笑、西瓜视频、虎牙、梨视频、acfun、好看视频等 |
+| [Beav](https://github.com/Jamailar/Beav) | ![](https://img.shields.io/github/stars/Jamailar/Beav?style=flat-square) | ✅ 可自部署 | 小红书全域解决方案，开箱即用，一键安装：小红书 AI 工作台、自媒体素材库、AI 写作 + 图片自动编排，支持小红书图文与评论区下载、爬虫数据采集。你桌面盒子里的 AI 小河狸。 |
+| [Douyin_TikTok_Download_API](https://github.com/Evil0ctal/Douyin_TikTok_Download_API) | ![](https://img.shields.io/github/stars/Evil0ctal/Douyin_TikTok_Download_API?style=flat-square) | ✅ 可自部署 | Self-hosted TikTok & Douyin scraper and no-watermark video downloader — async REST API, MCP server, CLI and web console for posts, profiles, comments and playlists. Self-healing identity pool. |
+
+---
+
+## 十一、AI 视频分析与知识笔记
+
+> 一键总结视频、自动生成结构化笔记、音视频转文档/思维导图，把视频内容沉淀为可检索的知识库。
+
+| 项目 | Stars | 可用性 | 说明 |
+|------|-------|--------|------|
+| [BibiGPT-v1](https://github.com/JimmyLv/BibiGPT-v1) | ![](https://img.shields.io/github/stars/JimmyLv/BibiGPT-v1?style=flat-square) | ⚠️ 部分可用 | AI 视频一键总结 — 支持 B站、YouTube、播客等 |
+| [BiliNote](https://github.com/JefferyHcool/BiliNote) | ![](https://img.shields.io/github/stars/JefferyHcool/BiliNote?style=flat-square) | ✅ 直接可用 | AI 视频笔记生成 — B站等平台视频自动提取笔记 |
+| [AI-Media2Doc](https://github.com/hanshuaikang/AI-Media2Doc) | ![](https://img.shields.io/github/stars/hanshuaikang/AI-Media2Doc?style=flat-square) | ✅ 直接可用 | 一键把音视频转成小红书/公众号/知识笔记/思维导图/总结/字幕，并支持智能截图插图 |
+| [Douyin-full-stack-summarizer](https://github.com/skepty2333/Douyin-full-stack-summarizer) | ![](https://img.shields.io/github/stars/skepty2333/Douyin-full-stack-summarizer?style=flat-square) | ✅ 直接可用 | 将抖音视频转化为结构化的深度学习笔记，并沉淀为可被 MCP 调用的 SQL 知识库，实现视频内容的结构化知识管理。 |
+
+---
+
+## 常见问题
+
+### 最好的开源一键视频生成工具是什么？
+**MoneyPrinterTurbo**（20k+ stars）是目前最流行、维护最活跃的方案。它覆盖完整流水线：LLM 生成脚本 → TTS 配音 → 字幕生成 → 素材搜索 → 视频合成。
+
+### 最好的开源文生视频模型是什么？
+研究级质量首推 **Wan2.1**（阿里，20k+ stars）和 **Open-Sora**（22k+ stars）。消费级显卡用户推荐 **FramePack**，支持固定显存生成任意长度视频；显存更紧张可看腾讯 **HunyuanVideo-1.5**（8.3B 参数）。
+
+### 如何实现视频多平台一键分发？
+**social-auto-upload** 支持抖音、TikTok、B站、快手、小红书、视频号等主流平台的自动上传，自动填充标题、描述和标签。需要完整排期/团队协作可选 **Postiz** 或 **BrightBean Studio**。
+
+### 想做 AI 短剧 / 漫剧 / 小说推文，选哪个？
+**PlotCraft**、**LocalMiniDrama** 功能完整、角色一致性较好；小说推文场景可直接用 **AI_novel** 或 **AI-NovelFlow**。
+
+### 视频出海、多语言翻译用什么？
+**VideoLingo** 提供 Netflix 级字幕切分、AI 翻译与配音对齐；需要一站式配音可选 **KrillinAI**、**MioSub**；本地零成本转写可配合 **faster-whisper** / **whisper.cpp**。
+
+---
+
+## 选型速查
+
+| 你的需求 | 首选 | 备选 |
+|----------|------|------|
+| 不懂代码，想一键出片 | MoneyPrinterTurbo | NarratoAI、ShortGPT、MoneyPrinterPlus |
+| 消费级显卡本地跑视频模型 | FramePack | HunyuanVideo-1.5、Wan2.1 |
+| 做电商带货 / 商品营销视频 | ClipForge | Shopro-AI、short-video-factory |
+| 做 AI 短剧 / 漫剧 | PlotCraft | LocalMiniDrama、huobao-drama |
+| 小说推文 / 小说转视频 | AI_novel | AI-NovelFlow、PlotCraft |
+| 长视频 / 直播切爆款短视频 | CutDeck | hotclip、ai-highlight-clip、autoclip |
+| 视频翻译 / 出海本地化 | VideoLingo | KrillinAI、MioSub、xiaohu-video-translate |
+| 本地语音转字幕 | faster-whisper | whisper.cpp、VideoCaptioner |
+| 多平台一键分发 | social-auto-upload | Postiz、matrix、PostBot |
+| 批量搬运海外视频 | YTB2BILI | video-mover、Y2A-Auto、biliup |
+| 扒竞品 / 社媒数据采集 | MediaCrawler | douyin、xhs、TikHub SDK |
+| 视频去水印下载 | Douyin_TikTok_Download_API | videodl、parse-video |
+| 视频转笔记 / 总结 | BiliNote | AI-Media2Doc、BibiGPT |
+| 用代码批量生成视频 | Remotion | MoviePy、ffmpeg-python |
+| 数字人 / 虚拟主播 | aigcpanel | — |
+
+---
+
+## 贡献
+
+欢迎贡献！可以提交 Issue 或 Pull Request，补充新的开源项目、修正失效链接或更新项目状态。提交前请确认项目为**开源**且与 AI 视频/自媒体工作流相关，并尽量附上项目链接与一句话说明。
+
+## 许可证
+
+[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+本清单采用 CC0 1.0 协议发布，可自由复制、修改和分发。
