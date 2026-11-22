@@ -150,6 +150,7 @@
 | [hotclip](https://github.com/xixihhhh/hotclip) | ![](https://img.shields.io/github/stars/xixihhhh/hotclip?style=flat-square) | ✅ 可自部署 | 免费开源的 AI 剪辑 / 直播切片工具：长视频、直播回放、播客一键切成爆款竖屏短视频——AI 找高光金句、自动加字幕、横屏转竖屏，本地运行无水印不上传。Free open-source Opus Clip alternative, 100% local. |
 | [VideoHub](https://github.com/cacity/VideoHub) | ![](https://img.shields.io/github/stars/cacity/VideoHub?style=flat-square) | ✅ 可自部署 | VideoHub 是一款本地化多平台视频处理与智能剪辑工具，支持 YouTube、抖音/TikTok、Instagram、Bilibili 和 Twitter/X，提供视频下载、Whisper 转写、字幕翻译与润色、多模型 AI 配音、影视解说、故事剪辑、音乐卡点及剧集批量处理，并可通过 Codex、Claude Code 等智能助手以自然语言完成完整工作流。 |
 | [autoclip](https://github.com/zhouxiaoka/autoclip) | ![](https://img.shields.io/github/stars/zhouxiaoka/autoclip?style=flat-square) | ✅ 可自部署 | AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing. |
+| [Clips Kitty](https://github.com/ColinGPT9/clips-studio) | ![](https://img.shields.io/github/stars/ColinGPT9/clips-studio?style=flat-square) | ✅ 可自部署 | Clips Kitty：免费开源（AGPL-3.0）的 Windows 桌面 AI 切片工具，把 Twitch、Kick、YouTube 的直播回放和长视频自动切成带字幕的 9:16 竖屏短视频。Whisper 转写、本地大模型（Ollama）找高光、说话人追踪构图，全部在本机运行；自带 MCP 服务器，可让 Claude 等 AI 助手排队视频、查看切片并安排发布。Free, open-source AI clipper for Windows that runs on your own PC. |
 | [scene-fab](https://github.com/Agions/scene-fab) | ![](https://img.shields.io/github/stars/Agions/scene-fab?style=flat-square) | ⚠️ 部分可用 | scene-fab — AI 影视解说创作工具，智能拆条、AI 解说生成、一键配音合成。自动识别精彩片段，生成解说文案并合成完整影视解说视频。 |
 
 ---
